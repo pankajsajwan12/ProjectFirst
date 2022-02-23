@@ -5,14 +5,24 @@
 #header{
     width: 100%;
     border: 2px solid black;
+    position: static;
     /* padding: 0 50px; */
 }
 
 #main-header{
     width: 85%;
-    height: 60px;
+    height: 90px;
     margin: auto;
     /* border: 1px solid red; */
+}
+.top-header-img{
+    display: flex;
+}
+.top-header-img>div{
+    width: 8px;
+    height: 15px;
+    background-color: red;
+    margin-left: 7px;
 }
 .logo-header{
     width: 260px;
@@ -24,9 +34,10 @@
 }
 .bottom-header-img{
     display: flex;
+    margin-top: 15px;
 }
 .header-menu{
-    margin-top: 6px;
+    margin-top: 8px;
 }
 .header-menu>ul{
     display: flex;
@@ -42,17 +53,16 @@
 }
 
 .order-btton{
-  
     margin-left: 300px;
-    margin-top: 15px;
 }
 .btn , .btn1{
     color: white;
     border-radius: 25px;
     font-size: 17px;
-    width: 150px;
+    width: 160px;
     background-color: red;
-    height: 35px;
+    height: 40px;
+    border: 0px;
 }
 
 .button{
@@ -64,9 +74,12 @@
     /* margin-top: 15px; */
 }
 .bag-btton{
-    margin-top: 16px 
+    margin-top: 10px 
 }
-
+.login-btton{
+    margin-top: -6px;
+  
+}
 .black-text{
     display: flex;
     align-items: center;
@@ -138,7 +151,4 @@
     font-weight: 700;
     border: 1px solid black;
     margin: 0px 0px 80px 222px;
-}
-.kfc-carrer-img-content-p2{
-    
 }
