@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#header{
+    width: 100%;
+    border: 2px solid black;
+    /* padding: 0 50px; */
+}
+
+#main-header{
+    width: 85%;
+    height: 60px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.logo-header{
+    width: 260px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 600;
+    font-family: 'Redressed', cursive;
+    font-size: 19px;
+
+}
+.bottom-header-img{
+    display: flex;
+}
+.header-menu{
+    margin-top: 6px;
+}
+.header-menu>ul{
+    display: flex;
+    list-style: none;
+   margin-left: 20px; 
+}
+
+.header-menu>ul>li{
+    /* border: 1px solid slateblue; */
+    margin-left: 29px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.order-btton{
+  
+    margin-left: 300px;
+    margin-top: 15px;
+}
+.btn , .btn1{
+    color: white;
+    border-radius: 25px;
+    font-size: 17px;
+    width: 150px;
+    background-color: red;
+    height: 35px;
+}
+
+.button{
+    display: flex;
+    margin-left: 40px;
+}
+.button>div{
+    margin-left: 20px;
+    /* margin-top: 15px; */
+}
+.bag-btton{
+    margin-top: 16px 
+}
+
+.black-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202124;
+    width: 100%;
+    height: 40px;
+    color: #ffff;
+    font-size: 17px;
+}
+.black-text>p{
+   padding-left: 20px;
+}
+
+#red{
+    background-color: #e4002b;
+    height: 600px;
+    text-align: center;
+    color: #ffff;
+}
+#red-content>div:first-child{
+    padding-top: 40px;
+}
+#red-content>div:nth-child(2){
+    width: 600px;
+    /* border: 2px solid palegreen; */
+    height: 200px;
+    margin: auto;
+    line-height: 80px;
+    font-size: 60px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#red-content>div:nth-child(3){
+    margin-top: -50px;
+}
+
+.red-button{
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.btn1{
+    width: 170px;
+    background-color: black;
+    font-weight: 600;
+}
+
+.background-image{
+    background: url("img/hero-careers.jpg")no-repeat;
+    width: 100%;
+    height: 420px;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 420px;
+    background: rgba(0,0,0,0.5);
+    color: #ffff;
+}
+
+.kfc-carrer-img-content-p1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid black;
+    margin: 0px 0px 80px 222px;
+}
+.kfc-carrer-img-content-p2{
+    
+}
