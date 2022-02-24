@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <style>
-       #innerBox{
+
+#innerBox{
         display: flex;
         gap: 30px;
         margin: auto;
@@ -18,8 +19,8 @@
 
     }
     img{
-        height: 250px;
-        width: 100%;
+        height: 150px;
+        width: 150px;
 
     }
     #smallBox{
@@ -36,51 +37,25 @@
         padding-left: 10px;
         line-height: 80%;
     }
-    #text{
-       margin: auto;
-       width: 90%;
-       padding-bottom: 50px;
-       font-family:Impact-fantasy;
-    }
+  
 
 </style>
 <body>
-    <div id="text">
-        <h1>
-            FEATURED ITEMS
-        </h1>
-    </div>
+    
     <div id="box">
-        <div id="innerBox">
-
-        </div>
-
+        <div id="innerBox"></div>
     </div>
 </body>
 </html>
-
 <script>
-    var feaObjArr = [{
-    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
-    itemName :"Sandwich And Tenders Meal",
-    itemCal:"Calories:4700-7430"},
+   
+   var itemSel = JSON.parse(localStorage.getItem("selected"))
+   itemSel.map(function(elem,index,arr){
 
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndcombo?q=75",
-        itemName :"KFC Chicken Sandwich Combo",
-        itemCal:" Calories:690-1160"
-    },
-
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
-        itemName :"8 pc Meal",
-        itemCal:"Calories:2300-4980"
-    }]
-
-
-
-feaObjArr.map(function(elem,inde,arr){
     var div1 =document.createElement("div");
+    div1.addEventListener("click",function(){
+        myfunction(elem);
+    })
     div1.setAttribute("id","smallBox");
     var  img = document.createElement("img");
     img.setAttribute("src",elem.itemImage);
@@ -96,6 +71,7 @@ feaObjArr.map(function(elem,inde,arr){
     para3.setAttribute("class","para");
     div1.append(img,para1,para2,para3);
     document.querySelector("#innerBox").append(div1)
-})
-
+   
+   })
+  
 </script>

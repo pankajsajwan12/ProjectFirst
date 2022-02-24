@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-       #innerBox{
+    #innerBox{
         display: flex;
         gap: 30px;
         margin: auto;
@@ -18,8 +18,8 @@
 
     }
     img{
-        height: 250px;
-        width: 100%;
+        height: 150px;
+        width: 150px;
 
     }
     #smallBox{
@@ -36,51 +36,72 @@
         padding-left: 10px;
         line-height: 80%;
     }
-    #text{
+    #first{
        margin: auto;
        width: 90%;
        padding-bottom: 50px;
-       font-family:Impact-fantasy;
+       font-family: National- 2- Condensed;
     }
+
+
 
 </style>
 <body>
-    <div id="text">
-        <h1>
-            FEATURED ITEMS
-        </h1>
+    <div id="first">
+        <h1>Quick Bites</h1>
     </div>
     <div id="box">
-        <div id="innerBox">
-
-        </div>
-
+        <div id="innerBox"></div>
     </div>
 </body>
 </html>
-
 <script>
-    var feaObjArr = [{
-    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
-    itemName :"Sandwich And Tenders Meal",
-    itemCal:"Calories:4700-7430"},
+    var dataObjArr = [{
+    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-biscuit?q=75",
+    itemName :"Biscuit",
+    itemCal:"Calories:180"},
 
     {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndcombo?q=75",
-        itemName :"KFC Chicken Sandwich Combo",
-        itemCal:" Calories:690-1160"
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-AlcChLtl?q=75",
+        itemName :"Chicken Little",
+        itemCal:"Calories:300-540"
     },
 
     {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
-        itemName :"8 pc Meal",
-        itemCal:"Calories:2300-4980"
-    }]
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-FamousBowl?q=75",
+        itemName :"Famous Bowl",
+        itemCal:"Calories:840-1120"
+    },
+    {
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-IndFries?q=75",
+        itemName :"Secret Recipe Fries",
+        itemCal:"Calories:230-930"
+    },
+
+    {
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-6WingsUnsauced?q=75",
+        itemName :"6 kentuky Fried Wings",
+        itemCal:"Calories:580-880"
+    },
+    {
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-1Cookie?q=75",
+        itemName :"chocolate Chip Cookie",
+        itemCal:"Calories:120"
+    }
 
 
 
-feaObjArr.map(function(elem,inde,arr){
+
+]
+
+var selArr=[];
+
+dataObjArr.map(function(elem,index,arr){
+   
     var div1 =document.createElement("div");
+    div1.addEventListener("click",function(){
+        myfunction(elem);
+    })
     div1.setAttribute("id","smallBox");
     var  img = document.createElement("img");
     img.setAttribute("src",elem.itemImage);
@@ -96,6 +117,19 @@ feaObjArr.map(function(elem,inde,arr){
     para3.setAttribute("class","para");
     div1.append(img,para1,para2,para3);
     document.querySelector("#innerBox").append(div1)
+    
 })
+
+function myfunction(elem)
+{  
+ 
+     selArr.push(elem);
+    console.log(selArr);
+    localStorage.setItem("selected",JSON.stringify(selArr));
+    
+}
+localStorage.clear();
+
+
 
 </script>
