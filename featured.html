@@ -176,7 +176,7 @@
         var menDiv = document.createElement("div");
         menDiv.setAttribute("id", "grid") ;
         menDiv.addEventListener("click",function(){
-            addToPage(elem)
+            addToPage(featuredData)
         })
 
         var img =  document.createElement("img");
@@ -194,16 +194,16 @@
          
        menDiv.append(img, name, calories, location)
         
-          document.querySelector("#box").append(menDiv) ;
-    //   localStorage.setItem("featureDataPage",)
+        var p = document.querySelector("#box").append(menDiv)
 
     });
 }
     featuredDataDisplay();
-    function addToPage(elem)
+    
+    function addToPage(featuredData)
     {
-        window.location.href = "demo.html";
-        featuredDataDisplay(elem);
+        window.location.href = "demo.html"; 
+        featuredDataDisplay();
 
     }
     var  bucketData = JSON.parse(localStorage.getItem("bucketData"))
