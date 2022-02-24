@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC-Menu</title>
     <style>
-        *{
+        * {
             /* border: 1px solid black; */
             font-family: serif;
         }
-       .flex{
-           display: flex;
-           height: 100%;
-           width: 100%;
-       }
-       .container{
-           height: 600px;
-           width: 450px;
-           padding: 10px;
-           
-       }
-       #container2{
-              margin: 10px;
-              width: 80%;
-       }
-       img{
-           height: 200px;
-           width: 250px;
-           
-       }
-       img:hover{
-        -ms-transform: scale(1.2); 
-        -webkit-transform: scale(1.2); 
-          transform: scale(1.2); 
-         
-       }
-       #grid{
-           padding: 10px;
-          line-height: 5px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          margin: 10px;
-       }
-       #box, #box1,#box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9, #box10{
-        display: grid;
-           grid-template-columns: repeat(3,1fr);
-           grid-template-rows: 300px;
-           margin: 10px;
-           padding: 10px;
-           margin: 10px;
-       }
-       #featured, #bucket, #tenders, #sandwishes, #friedchicken, #potpiesBowls, #alacarte, #slides, #sauces{
-        padding: 10px;
-           margin: 10px;
-       }
-       .strip{
-           display: flex;
-          
-       }
-       .strip>div{
-           background-color: red;
-           width: 10px;
-           margin: 10px;
-           height: 30px;
-       }
-       a{
-           color: rgb(80, 79, 79);
-       }
-      #left-side-menu{
-          position: fixed;
-          width: 20%;
-          height: 100%;
-          background-color: white;
-      }
-       
-     
-       
-      
+
+        .flex {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 600px;
+            width: 450px;
+            padding: 10px;
+
+        }
+
+        #container2 {
+            margin: 10px;
+            width: 80%;
+        }
+
+        img {
+            height: 200px;
+            width: 250px;
+
+        }
+
+        img:hover {
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+
+        }
+
+        #grid {
+            padding: 10px;
+            line-height: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 10px;
+        }
+
+        #box,
+        #box1,
+        #box2,
+        #box3,
+        #box4,
+        #box5,
+        #box6,
+        #box7,
+        #box8,
+        #box9,
+        #box10 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 300px;
+            margin: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #featured,
+        #bucket,
+        #tenders,
+        #sandwishes,
+        #friedchicken,
+        #potpiesBowls,
+        #alacarte,
+        #slides,
+        #sauces {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .strip {
+            display: flex;
+
+        }
+
+        .strip>div {
+            background-color: red;
+            width: 10px;
+            margin: 10px;
+            height: 30px;
+        }
+
+        a {
+            color: rgb(80, 79, 79);
+        }
+
+        #left-side-menu {
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            background-color: white;
+        }
     </style>
 </head>
+
 <body>
     <div class="flex">
         <div class="container">
@@ -88,400 +116,421 @@
                 <div></div>
             </div>
             <div id="left-side-menu">
-            <h1>KFC® MENU</h1>
-            <h3><a href="#featured">Featured</a></h3>
-            <h3><a href="#bucket">Bucket</a></h3>
-            <h3><a href="#tenders">Tenders</a></h3>
-            <h3><a href="#sandwishes">Sandwiches</a></h3>
-            <h3><a href="#friedchicken">Fried Chicken</a></h3>
-            <h3><a href="#potpiesBowls">Pot Pies & Bowls</a></h3>
-            <h3><a href="#alacarte">A La Carte</a></h3>
-            <h3><a href="#slides">Slides</a></h3>
-            <h3><a href="#sauces">Sauces</a></h3>
-            <h3><a href="#deserts">Deserts</a></h3>
-            <h3><a href="#drinks">Drinks</a></h3>
+                <h1>KFC® MENU</h1>
+                <h3><a href="#featured">Featured</a></h3>
+                <h3><a href="#bucket">Bucket</a></h3>
+                <h3><a href="#tenders">Tenders</a></h3>
+                <h3><a href="#sandwishes">Sandwiches</a></h3>
+                <h3><a href="#friedchicken">Fried Chicken</a></h3>
+                <h3><a href="#potpiesBowls">Pot Pies & Bowls</a></h3>
+                <h3><a href="#alacarte">A La Carte</a></h3>
+                <h3><a href="#slides">Slides</a></h3>
+                <h3><a href="#sauces">Sauces</a></h3>
+                <h3><a href="#deserts">Deserts</a></h3>
+                <h3><a href="#drinks">Drinks</a></h3>
+            </div>
         </div>
-        </div>
-        <div id="container2" >
+        <div id="container2">
             <div id="featured">
                 <h1>Featured</h1>
             </div>
-            <div id="box"></a></div>
+            <a href="demo.html"><div id="box"></div></a>
 
             <div id="bucket">
                 <h1>Bucket</h1>
             </div>
-            <div id="box1"></div>
+            <a href="demo.html"><div id="box1"></div></a>
 
             <div id="tenders">
                 <h1>Tenders</h1>
             </div>
-            <div id="box2"></div>
+            <a href="demo.html"><div id="box2"></div></a>
 
             <div id="sandwishes">
                 <h1>Sandwiches</h1>
             </div>
-            <div id="box3"></div>
+            <a href="demo.html"><div id="box3"></div></a>
 
             <div id="friedchicken">
                 <h1>Fried Chicken</h1>
             </div>
-            <div id="box4"></div>
+            <a href="demo.html"><div id="box4"></div></a>
 
             <div id="potpiesBowls">
                 <h1>Pot Pies & Bowls</h1>
             </div>
-            <div id="box5"></div>
+            <a href="demo.html"><div id="box5"></div></a>
 
             <div id="alacarte">
                 <h1>A La Carte</h1>
             </div>
-            <div id="box6"></div>
+            <a href="demo.html"><div id="box6"></div></a>
 
             <div id="slides">
                 <h1>Slides</h1>
             </div>
-            <div id="box7"></div>
+            <a href="demo.html"><div id="box7"></div></a>
 
             <div id="sauces">
                 <h1>Sauces</h1>
             </div>
-            <div id="box8"></div>
+            <a href="demo.html"><div id="box8"></div></a>
 
             <div id="deserts">
                 <h1>Deserts</h1>
             </div>
-            <div id="box9"></div>
+            <a href="demo.html"><div id="box9"></div></a>
 
             <div id="drinks">
                 <h1>Drinks</h1>
             </div>
-            <div id="box10"></div>
-
-            
+            <a href="demo.html"><div id="box10"></div></a>
         </div>
     </div>
 
-    
+
 </body>
+
 </html>
 <script src="featured.js"></script>
 <script>
-    var featuredData = JSON.parse(localStorage.getItem("featuredData"))||[];
+    var featuredData = JSON.parse(localStorage.getItem("featuredData"));
     console.log(featuredData)
-    function featuredDataDisplay(){
-    featuredData.map(function(elem,index){
-         
-        
-        var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid");
-        menDiv.addEventListener("click",function(){
-            addToPage(elem)
-        })
+    function featuredDataDisplay() {
+        featuredData.map(function (elem, index) {
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url) ;
-       
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
-        calories.innerText = elem.calories;
+            var menDiv = document.createElement("div");
+            menDiv.setAttribute("id", "grid");
+            menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            })
 
-        var location =  document.createElement("p");
-        location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-        var p = document.querySelector("#box").append(menDiv)
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image_url);
 
-    });
-}
+            
+            var name = document.createElement("p");
+            name.innerText = elem.name;
+
+            var calories = document.createElement("p");
+            calories.innerText = elem.calories;
+
+            var location = document.createElement("p");
+            location.innerText = elem.location;
+
+            menDiv.append(img, name, calories, location)
+
+            document.querySelector("#box").append(menDiv)
+
+        });
+    }
     featuredDataDisplay();
-    var cartArr =[];
-    function addToPage(elem)
-    {
+    var cartArr = [];
+    function addToPage(elem) {
         cartArr.push(elem);
-        console.log(cartArr); 
-        localStorage.setItem("cartItemList",JSON.stringify(cartArr));
+        console.log(cartArr);
+        localStorage.setItem("cartItemList", JSON.stringify(cartArr));
         featuredDataDisplay();
     }
-    var  bucketData = JSON.parse(localStorage.getItem("bucketData"))
-    console.log( bucketData)
 
-    bucketData.map(function(elem,index){
-         
-        
+    // function addToDemo(elem) {
+    //     window.location.href= "demo.html"
+    // }
+    var bucketData = JSON.parse(localStorage.getItem("bucketData"))
+    console.log(bucketData)
+
+    bucketData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box1").append(menDiv) ;
-      
 
-    })
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box1").append(menDiv);
+
+
+    });
     var tendersData = JSON.parse(localStorage.getItem("tendersData"))
-    console.log( tendersData)
+    console.log(tendersData);
 
-    tendersData.map(function(elem,index){
-         
-        
+    tendersData.map(function (elem, index) {
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box2").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box2").append(menDiv);
+
 
     })
 
     var sandwishesData = JSON.parse(localStorage.getItem("sandwishesData"))
     console.log(sandwishesData)
 
-    sandwishesData.map(function(elem,index){
-         
-        
+    sandwishesData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box3").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box3").append(menDiv);
+
 
     })
 
-    var friedchickenData= JSON.parse(localStorage.getItem("friedchickenData"))
-    console.log( friedchickenData)
+    var friedchickenData = JSON.parse(localStorage.getItem("friedchickenData"))
+    console.log(friedchickenData)
 
-    friedchickenData.map(function(elem,index){
-         
-        
+    friedchickenData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box4").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box4").append(menDiv);
+
 
     })
 
-    var potpiesData= JSON.parse(localStorage.getItem("potpiesData"))
-    console.log( potpiesData)
+    var potpiesData = JSON.parse(localStorage.getItem("potpiesData"))
+    console.log(potpiesData)
 
-    potpiesData.map(function(elem,index){
-         
-        
+    potpiesData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box5").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box5").append(menDiv);
+
 
     })
 
-    var alacarteData= JSON.parse(localStorage.getItem("alacarteData"))
-    console.log( alacarteData)
+    var alacarteData = JSON.parse(localStorage.getItem("alacarteData"))
+    console.log(alacarteData)
 
-    alacarteData.map(function(elem,index){
-         
-        
+    alacarteData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box6").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box6").append(menDiv);
+
 
     })
 
-    var slidesData= JSON.parse(localStorage.getItem("slidesData"))
-    console.log( slidesData)
+    var slidesData = JSON.parse(localStorage.getItem("slidesData"))
+    console.log(slidesData)
 
-    slidesData.map(function(elem,index){
-         
-        
+    slidesData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box7").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box7").append(menDiv);
+
 
     })
-    var saucesData= JSON.parse(localStorage.getItem("saucesData"))
-    console.log( saucesData)
+    var saucesData = JSON.parse(localStorage.getItem("saucesData"))
+    console.log(saucesData)
 
-    saucesData.map(function(elem,index){
-         
-        
+    saucesData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box8").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box8").append(menDiv);
+
 
     })
 
-    var desertsData= JSON.parse(localStorage.getItem("desertsData"))
-    console.log( desertsData)
+    var desertsData = JSON.parse(localStorage.getItem("desertsData"))
+    console.log(desertsData)
 
-    desertsData.map(function(elem,index){
-         
-        
+    desertsData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box9").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box9").append(menDiv);
+
 
     })
-    var drinksData= JSON.parse(localStorage.getItem("drinksData"))
-    console.log( drinksData)
+    var drinksData = JSON.parse(localStorage.getItem("drinksData"))
+    console.log(drinksData)
 
-    drinksData.map(function(elem,index){
-         
-        
+    drinksData.map(function (elem, index) {
+
+
         var menDiv = document.createElement("div");
-        menDiv.setAttribute("id", "grid") ;
+        menDiv.setAttribute("id", "grid");
+        menDiv.addEventListener("click", function () {
+                addToPage(elem)
+            });
+        var img = document.createElement("img");
+        img.setAttribute("src", elem.image_url)
 
-        var img =  document.createElement("img");
-        img.setAttribute("src" , elem.image_url)
+        var name = document.createElement("p");
+        name.innerText = elem.name;
 
-        var name =  document.createElement("p");
-        name.innerText = elem.name ;
-        
-        var calories =  document.createElement("p");
+        var calories = document.createElement("p");
         calories.innerText = elem.calories;
 
-        var location =  document.createElement("p");
+        var location = document.createElement("p");
         location.innerText = elem.location;
-         
-       menDiv.append(img, name, calories, location)
-        
-          document.querySelector("#box10").append(menDiv) ;
-      
+
+        menDiv.append(img, name, calories, location)
+
+        document.querySelector("#box10").append(menDiv);
+
 
     });
- 
+
 </script>

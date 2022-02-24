@@ -14,11 +14,13 @@
         }
 
         .contentbox {
-            background-color: wheat;
+            width: 30%;
+            margin-right: 50px;
+            background-color: #ffffff;
             /* border: 2px solid black; */
             display: flex;
             flex-direction: column;
-            margin-top: 300px;
+            margin-top: 100px;
         }
 
         img {
@@ -28,24 +30,26 @@
 
         #grid {
             display: flex;
-           
-        }
-
-        .content-box{
-            display: flex;
-            flex-direction: column;
-            background-color: blue;
-            width: 200px;
-            height: 500px;
+            border: 1px solid red;    
         }
         #box{
-            display: flex;
+           display: grid;
+           grid-template-columns: repeat(1,1fr);
+           gap: 20px;
+        }
+        #btn{
+            width: 80%;
+            font-size: large;
+            color: white;
+            background-color: red;
+            border-radius: 35px;
+            text-align: center;
+            height: 50px;
         }
     </style>
 </head>
 
 <body>
-    <h1>here coming imge data</h1>
     <div id="box"></div>
     <div class="content-box">
 
@@ -54,7 +58,7 @@
 
 </html>
 <script>
-    var cartListArr = JSON.parse(localStorage.getItem("cartItemList")) || [];
+    var cartListArr = JSON.parse(localStorage.getItem("cartItemList"));
     // var cartListArr =  []
     console.log(cartListArr);
     function featuredDataDisplay() {
@@ -65,28 +69,39 @@
 
             var div1 = document.createElement("div")
             div1.setAttribute("class", "imagbox")
-
+            
             var img = document.createElement("img");
             img.setAttribute("src", elem.image_url);
 
             div1.append(img)
-            var name = document.createElement("p");
-            name.innerText = elem.name;
-
+            
             var div2 = document.createElement("div");
             div2.setAttribute("class", "contentbox")
 
-            var calories = document.createElement("p");
+            var name = document.createElement("h1");
+            name.innerText = elem.name;
+
+            var para1 = document.createElement("p");
+            para1.innerText="8 pieces of our freshly prepared World Famous Chicken - 2 drums, 2 thighs, 2 breasts, 2 wings. 2 large sides of your choice and 4 biscuits."
+
+            var calories = document.createElement("h3");
             calories.innerText = elem.calories;
 
-            var location = document.createElement("p");
+            var location = document.createElement("h4");
             location.innerText = elem.location;
 
+            var quantiy = document.createElement("p")
+            quantiy.innerText="quantiy"
+            quantiy.style.fontSize="18px";
+
+            var btn = document.createElement("button")
+            btn.innerText="Pick Store For Price"
+            btn.setAttribute("id","btn")
             // var html = document.createElement("div")
             // html.setAttribute("class",".content-box");
-            div2.append(name, calories, location)
+            div2.append(name,para1, calories, location,quantiy,btn)
 
-            menDiv.append(div1,div2)
+            menDiv.append(div1,div2,)
 
             document.querySelector("#box").append(menDiv);
 
