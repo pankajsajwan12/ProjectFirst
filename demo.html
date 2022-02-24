@@ -1,18 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .imagbox {
+            margin-left: 250px;
+            width: 60%;
+            height: 700px;
+        }
+
+        .contentbox {
+            background-color: wheat;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            margin-top: 300px;
+        }
+
+        img {
+            width: 700px;
+            height: 700px;
+        }
+
+        #grid {
+            display: flex;
+           
+        }
+
+        .content-box{
+            display: flex;
+            flex-direction: column;
+            background-color: blue;
+            width: 200px;
+            height: 500px;
+        }
+        #box{
+            display: flex;
+        }
+    </style>
 </head>
+
 <body>
     <h1>here coming imge data</h1>
+    <div id="box"></div>
+    <div class="content-box">
+
+    </div>
 </body>
+
 </html>
 <script>
-    var featuredData = JSON.parse(localStorage.getItem("featuredData"))||[];
-    featuredData.map(function(elem,index){
-        console.log(featuredData);
-    })
+    var cartListArr = JSON.parse(localStorage.getItem("cartItemList")) || [];
+    // var cartListArr =  []
+    console.log(cartListArr);
+    function featuredDataDisplay() {
+        cartListArr.map(function (elem, index) {
+
+            var menDiv = document.createElement("div");
+            menDiv.setAttribute("id", "grid");
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("class", "imagbox")
+
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image_url);
+
+            div1.append(img)
+            var name = document.createElement("p");
+            name.innerText = elem.name;
+
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "contentbox")
+
+            var calories = document.createElement("p");
+            calories.innerText = elem.calories;
+
+            var location = document.createElement("p");
+            location.innerText = elem.location;
+
+            // var html = document.createElement("div")
+            // html.setAttribute("class",".content-box");
+            div2.append(name, calories, location)
+
+            menDiv.append(div1,div2)
+
+            document.querySelector("#box").append(menDiv);
+
+        });
+    }
+    featuredDataDisplay();
 </script>
