@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marraiage_age_validator</title>
+    <style>
+        .main{
+            padding-top: 30px;
+            width: 300px;
+            margin: auto;
+            background-color: azure;
+        }
+        .main>div{
+            margin: 20px 40px;
+        }
+        option{
+            width: 100%;
+        }
+        #reset{
+            display: none;
+            margin-left: 90px; 
+            width: 60px;    
+            font-size: 18px;
+            border: 1px solid red;
+            background-color: aquamarine;  
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>Name :<input type="text" name="" id="name" placeholder="Enter your Name"></div>    
+        <div>Gender :<select name="" id="gender">
+            <option value="">gender</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+        </select>
+    </div>
+        <div>Age :<input type="number" id="age"></div>
+        <div><button id="submit" onclick="checkMarraigeAge()">check your marraiage age</button></div> 
+        <div><h2 id="tagh2"></h2></div>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    </body>
+    
+   
+</html>
+<script>
+ function checkMarraigeAge(){
+    var age = document.getElementById("age").value
+
+    if(age>18)
+    {
+        document.getElementById("tagh2").innerText="Yes you are marry with a beautiful Person"
+
+        document.getElementById("reset").style.display="inline"
+    }
+    if(age<18)
+    {
+        document.getElementById("tagh2").innerText="Oh! Sorry yor are teen right now"
+        document.getElementById("reset").style.display="inline"
+    }
+    if(age==18)
+    {
+        document.getElementById("tagh2").innerText="Yes you can do marry but wait some extra Time"
+        document.getElementById("reset").style.display="inline"
+    }
+ }
+ function reset(){
+     document.getElementById("name").innerText=""
+     document.getElementById("gender").innerText=""
+     document.getElementById("age").value=""
+     document.getElementById("tagh2").innerText=""
+ }
+</script>

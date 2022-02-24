@@ -23,7 +23,7 @@
        }
        #container2{
               margin: 10px;
-              width: 100%;
+              width: 80%;
        }
        img{
            height: 200px;
@@ -67,7 +67,12 @@
        a{
            color: rgb(80, 79, 79);
        }
-      
+      #left-side-menu{
+          position: fixed;
+          width: 20%;
+          height: 100%;
+          background-color: white;
+      }
        
      
        
@@ -82,7 +87,7 @@
                 <div></div>
                 <div></div>
             </div>
-            
+            <div id="left-side-menu">
             <h1>KFC® MENU</h1>
             <h3><a href="#featured">Featured</a></h3>
             <h3><a href="#bucket">Bucket</a></h3>
@@ -96,7 +101,8 @@
             <h3><a href="#deserts">Deserts</a></h3>
             <h3><a href="#drinks">Drinks</a></h3>
         </div>
-        <div id="container2">
+        </div>
+        <div id="container2" >
             <div id="featured">
                 <h1>Featured</h1>
             </div>
@@ -159,22 +165,23 @@
     
 </body>
 </html>
-<script src="./menuData.js"></script>
+<script src="featured.js"></script>
 <script>
-    var featuredData = JSON.parse(localStorage.getItem("featuredData"))
+    var featuredData = JSON.parse(localStorage.getItem("featuredData"))||[];
     console.log(featuredData)
-
+    function featuredDataDisplay(){
     featuredData.map(function(elem,index){
          
         
         var menDiv = document.createElement("div");
         menDiv.setAttribute("id", "grid") ;
-        // menDiv.addEventListener("click" function(){
-        //     myFunction(elem)
-        // })
+        menDiv.addEventListener("click",function(){
+            addToPage(elem)
+        })
 
         var img =  document.createElement("img");
         img.setAttribute("src" , elem.image_url) ;
+       
 
         var name =  document.createElement("p");
         name.innerText = elem.name ;
@@ -188,13 +195,17 @@
        menDiv.append(img, name, calories, location)
         
           document.querySelector("#box").append(menDiv) ;
-      
+    //   localStorage.setItem("featureDataPage",)
 
     });
-    // function myFunction(elem)
-    // {
-    //     window.location.href = "blank.html";
-    // }
+}
+    featuredDataDisplay();
+    function addToPage(elem)
+    {
+        window.location.href = "demo.html";
+        featuredDataDisplay(elem);
+
+    }
     var  bucketData = JSON.parse(localStorage.getItem("bucketData"))
     console.log( bucketData)
 
@@ -471,7 +482,11 @@
       
 
     })
-
+    var imagepage = [];
+    function myFunction(){
+      var content = document.querySelector("#featured").innerHTML
+      console.log(content);
+    }
 
 
 
