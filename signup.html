@@ -81,7 +81,7 @@
         outline: none;
     }
 
-    .form {
+    #form {
         width: 600px;
         margin-left: 60px;
         margin-right: 0px;
@@ -89,7 +89,7 @@
         margin-top: -150px;
     }
 
-    .box {
+    #box {
         background-color: white;
         box-sizing: inherit;
         width: 500px;
@@ -153,26 +153,23 @@
             <img src="https://www.kfc.com/_next/static/images/drumstick-f34d7ede0a1a1e6955d5fe23aeba4f34.png">
         </div>
 
-        <div class="form">
-            <div class="box">
+        <div id="form">
+            <div id="box">
                 <h1>CREAT AN ACCOUNT</h1>
                 <form>
-                    <label>first Name</label>
-                    <input type="name" placeholder="First Name*">
-                    <label>Last Name</label>
-                    <input type="name" placeholder="Last Name*">
-                    <label>Email</label>
-                    <input type="email" placeholder="Email*">
-                    <label>Password</label>
-                    <input type="password" placeholder="Password*">
-                    <label>Confirm Password</label>
-                    <input type="Confirm password" placeholder="Confirm Password*">
 
-                    <button class="log-in">Create Account</button>
+                    <input id="firstname" type="text" placeholder="First Name*">
+
+                    <input id="lastname" type="text" placeholder="Last Name*">
+
+                    <input id="email" type="text" placeholder="Email*">
+
+                    <input id="pass" type="password" placeholder="Password*">
+
+                    <input id="confirmpass" type="password" placeholder="Confirm Password*">
+
+                    <button id="submit">Create Account</button>
                 </form>
-                <input type="checkbox"> By signing into the application or proceeding as a gues
-                <a href="#">Privacy Policy.</a> and <a href="#"> Terms of Use. </a> <br>
-                <input type="checkbox"> Sign up for Email Updates and Promotions.
 
 
                 <p>Already a member? <a href="http://192.168.0.105:5500/KFC%20project/LogIn.html?#">Sign In</a></p>
@@ -183,3 +180,5 @@
 </body>
 
 </html>
+<script src="signup.js">
+</script>
