@@ -17,9 +17,13 @@
         #navbar>div{
             margin-top: 10px;
         }
-        .menuback~div{
-            height:60px;
-            width:20%;
+        .button{
+            border:1.5px solid black;
+            color: black;
+            margin-top: 20px;
+            padding:12px 30px;
+            border-radius: 16px;
+            font-weight: bold;
         }
         .menuback+div>h2{
           margin-bottom: 5px;
