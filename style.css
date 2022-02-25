@@ -2,11 +2,16 @@
     padding: 0;
     margin: 0;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 #header{
     background-color: white;
     width: 100%;
     border: 2px solid black;
-    position: fixed;
+    /* position: fixed; */
+    height: 100px;
     /* padding: 0 50px; */
 }
 
@@ -27,7 +32,7 @@
     margin-left: 7px;
 }
 .logo-header{
-    width: 260px;
+    width: 290px;
     font-family: 'Cabin', sans-serif;
     font-size: 600;
     font-family: 'Redressed', cursive;
@@ -320,3 +325,5 @@ h3{
     width: 100%;
     height: 800px;
 }
+
+                  /* mainfeatured.html style is here */
