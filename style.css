@@ -63,11 +63,12 @@ a{
 }
 /* .btn , .btn1, */
 .redbtn,
+.singUpbtn,
  .headerbtn{
     color: white;
     border-radius: 25px;
     font-size: 17px;
-    width: 160px;
+    width: 170px;
     background-color: red;
     height: 40px;
     border: 0px;
@@ -331,6 +332,7 @@ a{
                                 margin-top: 80px; 
                             }
                             .footerlogo>h4{
+                                /* margin-top: 30px; */
                                color:white ;
                                font-size: 30px;
                                text-align: center;
@@ -341,7 +343,7 @@ a{
                                 margin-left:100px;
                             }
                             #box4>div~div{
-                              color:white;
+                              color:rgb(36, 131, 91);
                               margin-top: 80px;
                             }
                             #box4>div>p{

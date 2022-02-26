@@ -52,9 +52,9 @@
 <body>
     <div id="box"></div>
     <div class="content-box">
+        <div id="totalDiv"></div>
 
     </div>
-    <div id="totalDiv"></div>
 </body>
 
 </html>
@@ -64,7 +64,7 @@
     console.log(cartListArr);
     function featuredDataDisplay() {
         cartListArr.map(function (elem, index) {
-
+            document.querySelector("#box").innerHTML="";
             var menDiv = document.createElement("div");
             menDiv.setAttribute("id", "grid");
 
@@ -92,7 +92,7 @@
             location.innerText = elem.location;
 
             var price = document.createElement("p")
-            price.innerText="Price "+" "+elem.price+"/"+elem.quant;
+            price.innerText="Price "+" "+elem.price+"/";
 
             var quantiy = document.createElement("p")
             quantiy.innerText="Quantiy"+" "+elem.quant;

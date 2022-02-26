@@ -33,7 +33,7 @@
       <form id="form">
         <input type="text" placeholder="Card Number" id="cardNumber"><br><br>
         <input type="text" placeholder="CVV" id="cvv"><br><br>
-        <input type="month" id="date"><br><br>
+        <input type="datetime" id="date" placeholder="month/year"><br><br>
         <input type="text" placeholder="Name" id="name"><br><br>
         <input type="submit"  id="submit">
         <h4></h4>
@@ -65,8 +65,9 @@
               }
    
    var paytemPage = JSON.parse(localStorage.getItem("paytemArrList")) || [];
-
+function displaydata(){
    paytemPage.map(function(elem,index){
+    document.querySelector("#orderContentThing").innerHTML="";
     var menDiv = document.createElement("div");
             menDiv.setAttribute("id", "grid");
 
@@ -87,7 +88,7 @@
             calories.innerText = elem.calories;
 
             var price = document.createElement("p")
-            price.innerText="Price "+" "+elem.price+"/";;
+            price.innerText="Price "+" "+elem.price+"/";
 
             div2.append(name,price)
 
@@ -97,4 +98,17 @@
 
     
    });
+};
+displaydata();
+
+   var featurePageData = JSON.parse(localStorage.getItem("paytemArrListForRupesh"))||[];
+   displaydata(featurePageData);
+
+   function showTotal(){
+        var total =  paytemArrList.reduce(function(acc,elem){
+        return acc+(elem.price*elem.quant);
+    },0);
+    
+    document.getElementById("paytemPage").innerText=total;
+    }
 </script>

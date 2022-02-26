@@ -133,13 +133,16 @@
     btn3.addEventListener("click",function(){
         decrQnt(elem)
     })
-    //para2.setAttribute("class","para");
-    // var para3 = document.createElement("p");
-    // para3.innerText="Set Location For Price";
-    //para3.setAttribute("class","para");
+   
     var btn2= document.createElement("button");
     btn2.setAttribute("id","btn2")
     btn2.innerText="Add To Cart";
+    var imgDivFeature = document.createElement("div");
+    imgDivFeature.setAttribute("href","payment.html");
+    btn2.addEventListener("click",function(){
+        addToPayment(elem);
+    })
+
     var qntDisp= document.createElement("p");
     qntDisp.innerText="1";
     qntDisp.setAttribute("id","qntDisp")
@@ -158,9 +161,11 @@
        document.querySelector("#qntDisp").innerText= elem.qnt;
        
    }
-   function addCart()
+   var paytmeArr = [];
+   function addToPayment(elem)
    {
-        window.location.href="bag.html";
+        paytmeArr.push(paytmeArr);
+        localStorage.setItem("paytemArrListForRupesh",JSON.stringify(paytmeArr));
    }
 
    function decrQnt(elem)

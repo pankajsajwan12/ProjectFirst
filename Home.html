@@ -42,11 +42,13 @@
                 </div>
                 <div class="button">
                     <a href="signup.html"><div class="login-btton">
-                        <img src="img/man-icon.jpg" width="60" height="60"/></a>
+                        <img src="img/man-icon.jpg" width="60" height="60"/>
                     </div>
+                    </a>
                   <a href="bag.html">  <div class="bag-btton">
                         <img src="img/images.png" width="30" height="30"/>
-                    </div></a>
+                    </div>
+                </a>
                 </div>
             </div>
         </div>
@@ -221,7 +223,7 @@
 </html>
 <script>
    
-    var itemSel = JSON.parse(localStorage.getItem("selected"))
+    var itemSel = JSON.parse(localStorage.getItem("selected")) ||[];
     itemSel.map(function(elem,index,arr){
  
      var div1 =document.createElement("div");
@@ -231,21 +233,78 @@
      div1.setAttribute("id","smallBox");
      var  img = document.createElement("img");
      img.setAttribute("src",elem.itemImage);
-     // img.setAttribute("id","focus");
+     var div2=document.createElement("div");
+     div2.setAttribute("id","inside")
+ 
      var para1= document.createElement("p");
-     para1.setAttribute("class","featuredPara");
+     para1.setAttribute("class","para");
      para1.innerText=elem.itemName;
+     
      var para2 = document.createElement("p");
      para2.innerText=elem.itemCal;
-     para2.setAttribute("class","para");
-     var para3 = document.createElement("p");
-     para3.innerText="Set Location For Price";
-     para3.setAttribute("class","para");
-     div1.append(img,para1,para2,para3);
-     document.querySelector("#innerBox").append(div1)
+     para2.setAttribute("class","cal");
+     var para3=document.createElement("p");
+     para3.innerText= "Quantity+"-"elem.qnt"; 
+     var para4=document.createElement("p");
+     para4.innerText="Seasoned with asecret blend ofherbs and spices and crispy perfection ,Honey BBQ,Buffalo or Nashville Hot";
+     para4.setAttribute("class","cal");
+ 
+     var btn= document.createElement("button");
+     btn.innerText="increase1";
+     btn.setAttribute("id","btn");
+     btn.addEventListener("click",function(){
+         incrQnt(elem)
+     })
+     var btn3= document.createElement("button");
+     btn3.innerText="decrease1";
+     btn3.setAttribute("id","btn3");
+     btn3.addEventListener("click",function(){
+         decrQnt(elem)
+     })
+    
+     var btn2= document.createElement("button");
+     btn2.setAttribute("id","btn2")
+     btn2.innerText="place order";
+
+     var DivFeature = document.createElement("div");
+     DivFeature.setAttribute("href","payment.html");
+     DivFeature.append(btn2);
+     btn2.addEventListener("click",function(){
+         addToPayment(elem);
+     })
+ 
+     var qntDisp= document.createElement("p");
+     qntDisp.innerText="1";
+     qntDisp.setAttribute("id","qntDisp")
+    // btn2.addEventListener("click","addCart")
+     div1.append(img);
+     div2.append(para1,para2,para4,DivFeature,btn,qntDisp,btn3);
+     document.querySelector("#innerBox").append(div1,div2)
     
     })
-</script>
+ 
+    function incrQnt(elem)
+    {
+        elem.qnt++;
+        document.querySelector("#qntDisp").innerText= elem.qnt;
+        
+    }
+    var paytmeArr = [];
+    function addToPayment(elem)
+    {
+         paytmeArr.push(paytmeArr);
+         localStorage.setItem("paytemArrListForRupesh",JSON.stringify(paytmeArr));
+    }
+ 
+    function decrQnt(elem)
+    {
+        elem.qnt--;
+        document.querySelector("#qntDisp").innerText= elem.qnt;
+        
+    }
+    
+   
+ </script>
    
   
   
