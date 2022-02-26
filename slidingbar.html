@@ -7,17 +7,16 @@
     <title>Document</title>
 </head>
 <style>
-    #innerBox{
+    #innerQuicksBox{
         display: flex;
         gap: 30px;
         margin: auto;
         width: 90%;
-       
         height: 250px;
         
 
     }
-    img{
+    #quicksImage{
         height: 150px;
         width: 150px;
 
@@ -57,7 +56,11 @@
         <h1>Quick Bites</h1>
     </div>
     <div id="box">
+<<<<<<< HEAD
+        <div id="innerQuicksBox"></div>
+=======
        <a href="selected.html"> <div id="innerBox"></div></a>
+>>>>>>> main
     </div>
 </body>
 </html>
@@ -111,7 +114,7 @@ dataObjArr.map(function(elem,index,arr){
     div1.setAttribute("id","smallBox");
     var  img = document.createElement("img");
     img.setAttribute("src",elem.itemImage);
-    // img.setAttribute("id","focus");
+    img.setAttribute("id","quicksImage");
     var para1= document.createElement("p");
     para1.setAttribute("class","para");
     para1.innerText=elem.itemName;
@@ -122,7 +125,7 @@ dataObjArr.map(function(elem,index,arr){
     para3.innerText="Set Location For Price";
     para3.setAttribute("class","para");
     div1.append(img,para1,para2,para3);
-    document.querySelector("#innerBox").append(div1)
+    document.querySelector("#innerQuicksBox").append(div1)
     
 })
 }

@@ -54,6 +54,7 @@
     <div class="content-box">
 
     </div>
+    <div id="totalDiv"></div>
 </body>
 
 </html>
@@ -90,22 +91,74 @@
             var location = document.createElement("h4");
             location.innerText = elem.location;
 
+            var price = document.createElement("p")
+            price.innerText="Price "+" "+elem.price+"/"+elem.quant;
+
             var quantiy = document.createElement("p")
-            quantiy.innerText="quantiy"+" "+1
+            quantiy.innerText="Quantiy"+" "+elem.quant;
             quantiy.style.fontSize="18px";
+
+            var btn1 = document.createElement("button");
+        btn1.innerText="Add";
+        btn1.addEventListener("click",function(){
+            inCreaseQuantiy(index);
+            
+        });
+
+
+        var btn2 = document.createElement("button");
+        btn2.innerText="minuse";
+        btn2.addEventListener("click",function(){
+            decreaseQuantiy(index);
+        })
+            // var btn1 = document.createElement("h2");
+            // btn1.innerText="Add";
+            // var btn2 = document.createElement("h3");
+            // bnt2.innerText="delet";
+            // var btnDiv = document.createElement("div");
+            // btnDiv.style.display="flex"
+            // quantiy.append(quantiy,btn1,btn2);
 
             var btn = document.createElement("button")
             btn.innerText="Pick Store For Price"
             btn.setAttribute("id","btn")
             // var html = document.createElement("div")
             // html.setAttribute("class",".content-box");
-            div2.append(name,para1, calories, location,quantiy,btn)
+            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,btn)
 
-            menDiv.append(div1,div2,)
+            menDiv.append(div1,div2)
 
             document.querySelector("#box").append(menDiv);
 
         });
     }
     featuredDataDisplay();
+
+    function showTotal(){
+        var total =  cartListArr.reduce(function(acc,elem){
+        return acc+(elem.price*elem.quant);
+    },0);
+    
+    document.getElementById("totalDiv").innerText=total;
+    }
+
+    featuredDataDisplay(cartListArr);
+    showTotal();
+    function inCreaseQuantiy(index){
+        console.log(index);
+        cartListArr[index].quant++;
+        console.log(cartListArr); 
+        localStorage.setItem("increaseCartList",JSON.stringify(cartListArr));
+        featuredDataDisplay(cartListArr);   
+        showTotal();
+        }
+
+        function decreaseQuantiy(index){
+        console.log(index);
+        cartListArr[index].quant--;
+        console.log(cartListArr); 
+        localStorage.setItem("increaseCartList",JSON.stringify(cartListArr));
+        featuredDataDisplay(cartListArr);   
+        showTotal();
+        }
 </script>
