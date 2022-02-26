@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC.com</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style1.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,6 @@
         margin-top: 30px;
         width: 100%;
         height: 700px;
-        background-color: #efefec;
     }
     /* #innerQuicksBox{
         display: grid;
@@ -150,9 +150,26 @@
     </div>
 
        <!-- try onese these data and viedo -->
-       <div id="sharadDiv">
-
-       </div>
+       <div id="containerTryOneThese">
+        <div class="hoverbox">
+          <img src="https://digitaleat.kfc.com/menus/image/bare/kfc-IndFries?q=75&w=1280" alt="img1"/>
+          <div class="unique">SECRET RECIPE FRIES</div>
+          <div class="second">calories:230-290</div>
+          <div class="third">Set location for pricing.</div>
+        </div>
+        <div class="hoverbox">
+           <img src="https://digitaleat.kfc.com/menus/image/bare/kfc-IndMacCheese?q=75&w=1280" alt="img2" />
+           <div class="first">MAC & CHEESE</div>
+           <div class="second">calories:140-540</div>
+           <div class="third">Set location for pricing.</div>
+        </div>
+        <div  class="hoverbox">
+           <img src="https://digitaleat.kfc.com/menus/image/bare/kfc-biscuit?q=75&w=1280" alt="img3" />
+           <div class="first">BUISCUIT</div>
+           <div class="second">calories:180</div>
+           <div class="third">Set location for pricing.</div>
+        </div>
+    </div>   
 
        <!-- qucik bits div  -->
   <div id="quickBits">
@@ -183,7 +200,7 @@
 
    <!-- footeer by sharad yadav -->
 
-   <div id="box4">
+   <div id="mainFooter">
     <div class="footerlogo">
         <h4>Kentucky Fried Chicken</h4>
         <img src="data:image/png;base64,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" />
