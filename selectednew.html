@@ -55,24 +55,33 @@
 
     }
     #btn2{
-       margin-left: 100px;
-       margin-top: 30px;
+       
+       margin-top: 150px;
        background-color: red;
        height: 30px;
-       width: 100px;
+       width: 100%;
        border-radius: 5px;
 
 
 
     }
     #btn{
-        background-color: red;
+        background-color:brown;
         height: 30px;
         width:100px;
         border-radius: 5px;
+        margin-left:200px ;
     }
     #qntDisp{
         margin-left: 250px;
+    }
+    #btn3{
+        background-color: brown;
+        height:30px;
+        width: 100px;
+        border-radius:5px;
+        margin-left: 200px;
+        
     }
   
 
@@ -118,6 +127,12 @@
     btn.addEventListener("click",function(){
         incrQnt(elem)
     })
+    var btn3= document.createElement("button");
+    btn3.innerText="decrease1";
+    btn3.setAttribute("id","btn3");
+    btn3.addEventListener("click",function(){
+        decrQnt(elem)
+    })
     //para2.setAttribute("class","para");
     // var para3 = document.createElement("p");
     // para3.innerText="Set Location For Price";
@@ -130,7 +145,7 @@
     qntDisp.setAttribute("id","qntDisp")
    // btn2.addEventListener("click","addCart")
     div1.append(img);
-    div2.append(para1,para2,para4,btn2,btn,qntDisp);
+    div2.append(para1,para2,para4,btn2,btn,qntDisp,btn3);
     document.querySelector("#innerBox").append(div1,div2)
     //localStorage.setItem("newSel",JSON.stringify(itemSel))
     //disp(itemSel);
@@ -145,7 +160,14 @@
    }
    function addCart()
    {
+        window.location.href="bag.html";
+   }
 
+   function decrQnt(elem)
+   {
+       elem.qnt--;
+       document.querySelector("#qntDisp").innerText= elem.qnt;
+       
    }
    
   
