@@ -111,20 +111,18 @@
         btn2.addEventListener("click",function(){
             decreaseQuantiy(index);
         })
-            // var btn1 = document.createElement("h2");
-            // btn1.innerText="Add";
-            // var btn2 = document.createElement("h3");
-            // bnt2.innerText="delet";
-            // var btnDiv = document.createElement("div");
-            // btnDiv.style.display="flex"
-            // quantiy.append(quantiy,btn1,btn2);
 
             var btn = document.createElement("button")
             btn.innerText="Pick Store For Price"
             btn.setAttribute("id","btn")
-            // var html = document.createElement("div")
-            // html.setAttribute("class",".content-box");
-            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,btn)
+            
+            var anchorTag = document.createElement("a")
+            anchorTag.setAttribute("href","payment.html")
+            anchorTag.append(btn);
+            btn.addEventListener("click", function(){
+                addToPaytmPage(elem);
+            })
+            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,anchorTag)
 
             menDiv.append(div1,div2)
 
@@ -160,5 +158,11 @@
         localStorage.setItem("increaseCartList",JSON.stringify(cartListArr));
         featuredDataDisplay(cartListArr);   
         showTotal();
+        }
+
+        var paytemArr = [];
+        function addToPaytmPage(elem){
+            paytemArr.push(elem);
+            localStorage.setItem("paytemArrList",JSON.stringify(paytemArr));
         }
 </script>
