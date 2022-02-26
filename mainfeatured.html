@@ -8,105 +8,7 @@
     <title>KFC-Menu</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            /* border: 1px solid black; */
-            font-family: serif;
-        }
-
-        .flex {
-            /* margin-top: 50px; */
-            display: flex;
-            height: 100%;
-            width: 100%;
-        }
-
-        .container {
-            height: 650px;
-            width: 450px;
-            padding: 10px;
-
-        }
-
-        #container2 {
-            margin: 10px;
-            width: 80%;
-        }
-
-        .menuImg{
-            height: 250px;
-            width: 300px;
-
-        }
-
-        .menuImg:hover {
-            -ms-transform: scale(1.1);
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-
-        }
-
-        #grid{
-            padding: 10px;
-            line-height: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin: 10px;
-        }
-
-        #box,
-        #box1,
-        #box2,
-        #box3,
-        #box4,
-        #box5,
-        #box6,
-        #box7,
-        #box8,
-        #box9,
-        #box10 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 300px;
-            margin: 10px;
-            padding: 10px;
-            margin: 10px;
-            line-height: 20px;
-        }
-
-        #featured,
-        #bucket,
-        #tenders,
-        #sandwishes,
-        #friedchicken,
-        #potpiesBowls,
-        #alacarte,
-        #slides,
-        #sauces {
-            padding: 10px;
-            margin: 10px;
-        }
-
-        .strip {
-            display: flex;
-
-        }
-
-        .strip>div {
-            background-color: red;
-            width: 10px;
-            margin: 10px;
-            height: 30px;
-        }
-
-        a {
-            color: rgb(80, 79, 79);
-        }
-
-        #left-side-menu {
-            position: fixed;
-            width: 20%;
-            height: 100%;
-            background-color: white;
-        }
+        
     </style>
 </head>
 
@@ -121,7 +23,7 @@
             </div>
             <div class="bottom-header-img">
                 <div class="logo-header">
-                    <h3>Kentucky Fried Chicken</h3>
+                    <h3><a href="Home.html">Kentucky Fried Chicken</a></h3>
                 </div>
                 <div class="header-menu">
                     <ul>
@@ -132,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="order-btton">
-                    <button class="btn">Start Order</button>
+                    <button class="headerbtn"><a href="mainfeatured.html">Start Order</a></button>
                 </div>
                 <div class="button">
                     <div class="login-btton">
@@ -149,8 +51,8 @@
             <p>Start an Order for Pickup or Deilvery</p>
         </div>
     </div>
-    <div class="flex">
-        <div class="container">
+    <div class="menuFlex">
+        <div class="menucontainer">
             <div class="strip">
                 <div></div>
                 <div></div>

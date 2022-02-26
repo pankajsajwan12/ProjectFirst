@@ -11,51 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Redressed&display=swap" rel="stylesheet"> 
     
-    <style>
-        /* #quickBits{
-            margin-left: 250px;
-            margin-top: 30px;
-        } */
-    #sharadDiv{
-        margin-top: 30px;
-        width: 100%;
-        height: 700px;
-    }
-    /* #innerQuicksBox{
-        display: grid;
-        grid-template-columns: repeat(6,1fr);
-        gap: 20px;
-        margin: auto;
-        width: 90%;
-        height: 400px;
-        overflow-y: scroll;
-    }
-    #quicksImage{
-        height: 250px;
-        width: 250px;
-
-    }
-    #smallBox{
-        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-        background-color: rgb(255, 250, 250);
-        text-align: left;
-        height: auto;
-        width: 300px;
-    }
-    .para{
-        font-family: sans-serif;
-        font-size: 14px;
-        font-weight: 10;
-        padding-left: 10px;
-        line-height: 20px;
-    }
-    #first{
-       width: 90%;
-       padding-bottom: 50px;
-       font-family: National- 2- Condensed;
-    } */
-
-</style>
+    <style> 
+     
+    </style>
     
 </head>
 <body>
@@ -69,7 +27,7 @@
             </div>
             <div class="bottom-header-img">
                 <div class="logo-header">
-                    <h3>Kentucky Fried Chicken</h3>
+                    <h3><a href="Home.html">Kentucky Fried Chicken</a></h3>
                 </div>
                 <div class="header-menu">
                     <ul>
@@ -80,7 +38,7 @@
                     </ul>
                 </div>
                 <div class="order-btton">
-                    <button class ="headerbtn"><a href="mainfeatured.html">Start Order</a></button>
+                    <button class="headerbtn"><a href="mainfeatured.html">Start Order</a></button>
                 </div>
                 <div class="button">
                     <a href="signup.html"><div class="login-btton">
@@ -138,13 +96,13 @@
              </a></div>
  </div>
               <!-- featured data is here -->
- <div id="featured">
+ <div id="Uperfeatured">
 
      <div id="text">
          <h1> FEATURED ITEMS </h1>
         </div>
-        <div id="box">
-            <div id="innerFeaturedBox">   </div>    
+        <div id="featuredBox">
+             <div id="innerFeaturedBox"></div>    
         </div>
     </div>
 
@@ -172,11 +130,11 @@
 
        <!-- qucik bits div  -->
   <div id="quickBits">
-      <div id="first">
+      <div id="quickfirst">
           <h1>Quick Bites</h1>
         </div>
-        <div id="box">
-            <div id="innerQuicksBox"></div>
+        <div id="quickbox">
+            <a href="selected.html">  <div id="innerQuicksBox"></div></a>
         </div>
     </div>
 
@@ -359,82 +317,85 @@ feaObjArr.map(function(elem,inde,arr){
 
 </script>
                 <!-- Quciks Bite Div -->
-<script>
-    var dataObjArr = [{
-    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-biscuit?q=75",
-    itemName :"Biscuit",
-    itemCal:"Calories:180"},
+                <script>
+                    var dataObjArr = [{
+                    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-biscuit?q=75",
+                    itemName :"Biscuit",
+                    itemCal:"Calories:180"},
+                
+                    {
+                        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-AlcChLtl?q=75",
+                        itemName :"Chicken Little",
+                        itemCal:"Calories:300-540"
+                    },
+                
+                    {
+                        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-FamousBowl?q=75",
+                        itemName :"Famous Bowl",
+                        itemCal:"Calories:840-1120"
+                    },
+                    {
+                        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-IndFries?q=75",
+                        itemName :"Secret Recipe Fries",
+                        itemCal:"Calories:230-930"
+                    },
+                
+                    {
+                        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-6WingsUnsauced?q=75",
+                        itemName :"6 kentuky Fried Wings",
+                        itemCal:"Calories:580-880"
+                    },
+                    {
+                        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-1Cookie?q=75",
+                        itemName :"chocolate Chip Cookie",
+                        itemCal:"Calories:120"
+                    }
+                
+                
+                
+                
+                ]
+                
+                var selArr=[];
+                function disp(){
+                dataObjArr.map(function(elem,index,arr){
+                   
+                    var div1 =document.createElement("div");
+                    div1.addEventListener("click",function(){
+                        myfunction(elem);
+                    })
+                    div1.setAttribute("id","quickSmallBox");
+                    var  img = document.createElement("img");
+                    img.setAttribute("src",elem.itemImage);
+                    img.setAttribute("class","quickImg");
 
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-AlcChLtl?q=75",
-        itemName :"Chicken Little",
-        itemCal:"Calories:300-540"
-    },
-
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-FamousBowl?q=75",
-        itemName :"Famous Bowl",
-        itemCal:"Calories:840-1120"
-    },
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-IndFries?q=75",
-        itemName :"Secret Recipe Fries",
-        itemCal:"Calories:230-930"
-    },
-
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-6WingsUnsauced?q=75",
-        itemName :"6 kentuky Fried Wings",
-        itemCal:"Calories:580-880"
-    },
-    {
-        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-1Cookie?q=75",
-        itemName :"chocolate Chip Cookie",
-        itemCal:"Calories:120"
-    }
-
-
-
-
-]
-
-var selArr=[];
-
-dataObjArr.map(function(elem,index,arr){
-   
-    var div1 =document.createElement("div");
-    div1.addEventListener("click",function(){
-        myfunction(elem);
-    })
-    div1.setAttribute("id","smallBox");
-    var  img = document.createElement("img");
-    img.setAttribute("src",elem.itemImage);
-    img.setAttribute("id","quicksImage");
-    var para1= document.createElement("p");
-    para1.setAttribute("class","para");
-    para1.innerText=elem.itemName;
-    var para2 = document.createElement("p");
-    para2.innerText=elem.itemCal;
-    para2.setAttribute("class","para");
-    var para3 = document.createElement("p");
-    para3.innerText="Set Location For Price";
-    para3.setAttribute("class","para");
-    div1.append(img,para1,para2,para3);
-    document.querySelector("#innerQuicksBox").append(div1)
-    
-})
-
-function myfunction(elem)
-{  
- 
-     selArr.push(elem);
-    console.log(selArr);
-    localStorage.setItem("selected",JSON.stringify(selArr));
-    
-}
-localStorage.clear();
-
-
-
-</script>
-
+                    var para1= document.createElement("p");
+                    para1.setAttribute("class","Qucikpara");
+                    para1.innerText=elem.itemName;
+                    var para2 = document.createElement("p");
+                    para2.innerText=elem.itemCal;
+                    para2.setAttribute("class","Qucikpara");
+                    var para3 = document.createElement("p");
+                    para3.innerText="Set Location For Price";
+                    para3.setAttribute("class","Qucikpara");
+                    div1.append(img,para1,para2,para3);
+                    document.querySelector("#innerQuicksBox").append(div1)
+                    
+                })
+                }
+                disp();
+                
+                function myfunction(elem)
+                {  
+                 
+                     selArr.push(elem);
+                    console.log(selArr);
+                    elem.qnt=1;
+                    localStorage.setItem("selected",JSON.stringify(selArr));
+                    
+                }
+                localStorage.clear();
+                
+                
+                
+                </script>
