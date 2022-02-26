@@ -115,10 +115,14 @@
             var btn = document.createElement("button")
             btn.innerText="Pick Store For Price"
             btn.setAttribute("id","btn")
+            
+            var anchorTag = document.createElement("a")
+            anchorTag.setAttribute("href","payment.html")
+            anchorTag.append(btn);
             btn.addEventListener("click", function(){
                 addToPaytmPage(elem);
             })
-            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,btn)
+            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,anchorTag)
 
             menDiv.append(div1,div2)
 

@@ -5,9 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #paytemPage{
+            display: flex;
+            width: 70%;
+            margin: auto;
+            padding-top: 100px;
+        }
+        .paytemImg{
+            width: 250px;
+            height: 250px;
+        }
+        #paymentProcess{
+            display: gird;
+            grid-template-rows: repeat(2,1fr);
+            gap: 30px;
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Payment Process</h2>
+    <div id="paytemPage">
+    <div id="orderContentThing"></div>
+    <div id="paymentProcess">
+       <div><h2>Payment Process</h2></div> 
+       <div>
       <form id="form">
         <input type="text" placeholder="Card Number" id="cardNumber"><br><br>
         <input type="text" placeholder="CVV" id="cvv"><br><br>
@@ -15,8 +37,10 @@
         <input type="text" placeholder="Name" id="name"><br><br>
         <input type="submit"  id="submit">
         <h4></h4>
+    </div>
     </form>
-   
+</div>
+</div>
 </body>
 </html>
 
@@ -40,4 +64,37 @@
                  }
               }
    
+   var paytemPage = JSON.parse(localStorage.getItem("paytemArrList")) || [];
+
+   paytemPage.map(function(elem,index){
+    var menDiv = document.createElement("div");
+            menDiv.setAttribute("id", "grid");
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("class", "imagbox")
+            
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image_url);
+            img.setAttribute("class", "paytemImg")
+            
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "contentbox")
+
+            var name = document.createElement("h1");
+            name.innerText = elem.name;
+
+            var calories = document.createElement("h3");
+            calories.innerText = elem.calories;
+
+            var price = document.createElement("p")
+            price.innerText="Price "+" "+elem.price+"/";;
+
+            div2.append(name,price)
+
+            menDiv.append(img,div2)
+
+            document.querySelector("#orderContentThing").append(menDiv);
+
+    
+   });
 </script>
