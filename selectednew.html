@@ -143,7 +143,7 @@
     var qntDisp= document.createElement("p");
     qntDisp.innerText="1";
     qntDisp.setAttribute("id","qntDisp")
-   // btn2.addEventListener("click","addCart")
+    btn2.addEventListener("click",addCart());
     div1.append(img);
     div2.append(para1,para2,para4,btn2,btn,qntDisp,btn3);
     document.querySelector("#innerBox").append(div1,div2)
@@ -160,7 +160,7 @@
    }
    function addCart()
    {
-        window.location.href="bag.html";
+        window.location.href="payment.html";
    }
 
    function decrQnt(elem)
