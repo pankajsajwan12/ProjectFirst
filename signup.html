@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://www.kfc.com/favicon.ico" type="image/x-icon">
-
 
 </head>
 
 <style>
-    #container {
-        display: block;
+    #singupContainer {
+        /* display: block; */
+        padding-top: 150px;
         height: auto;
         width: 1019.06;
         display: flex;
@@ -48,7 +49,7 @@
         bottom: -11rem;
     }
 
-    img {
+    #img {
         height: 400px;
         position: center;
         max-width: 96rem;
@@ -89,7 +90,7 @@
         margin-top: -150px;
     }
 
-    #box {
+    #accounrbox{
         background-color: white;
         box-sizing: inherit;
         width: 500px;
@@ -142,7 +143,48 @@
 </style>
 
 <body>
-    <div id="container">
+    <div id="header">
+        <div id="main-header">
+            <div class="top-header-img">
+                <!-- three dot line -->
+                <div class="one-line"></div>
+                <div class="two-line"></div>
+                <div class="three-line"></div>
+            </div>
+            <div class="bottom-header-img">
+                <div class="logo-header">
+                    <h3><a href="Home.html">Kentucky Fried Chicken</a></h3>
+                </div>
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="mainfeatured.html">Menu</a></li>
+                        <li><a href="carerrs.html">Careers</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="blank.html">Find a KFC</a></li>
+                    </ul>
+                </div>
+                <div class="order-btton">
+                    <a href="mainfeatured.html"> <button class="singUpbtn">Start Order</button></a>
+                </div>
+                <div class="button">
+                    <a href="signup.html"><div class="login-btton">
+                        <img src="img/man-icon.jpg" width="60" height="60"/>
+                    </div>
+                    </a>
+                  <a href="bag.html">  <div class="bag-btton">
+                        <img src="img/images.png" width="30" height="30"/>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="black-text">
+            <img src="img/map-icon.jpg" width="30" height="30" alt="">
+            <p>Start an Order for Pickup or Deilvery</p>
+        </div>
+    </div>
+       <!-- login page -->
+    <div id="singupContainer">
         <div id="left">
             <div id="welcome">
                 WELCOME TO KFC.COM
@@ -150,11 +192,11 @@
             <div id="unlock">
                 UNLOCK FASTER CHECKOUT
             </div>
-            <img src="https://www.kfc.com/_next/static/images/drumstick-f34d7ede0a1a1e6955d5fe23aeba4f34.png">
+            <img  id="img" src="https://www.kfc.com/_next/static/images/drumstick-f34d7ede0a1a1e6955d5fe23aeba4f34.png">
         </div>
 
         <div id="form">
-            <div id="box">
+            <div id="accounrbox">
                 <h1>CREAT AN ACCOUNT</h1>
                 <form>
 
