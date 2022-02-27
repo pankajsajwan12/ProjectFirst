@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imagbox {
+            margin-left: 250px;
+            width: 60%;
+            height: 700px;
+        }
+
+        .contentbox {
+            width: 30%;
+            margin-right: 50px;
+            background-color: #ffffff;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+
+        img {
+            width: 700px;
+            height: 700px;
+        }
+
+        #grid {
+            display: flex;
+            border: 1px solid red;    
+        }
+        #box{
+           display: grid;
+           grid-template-columns: repeat(1,1fr);
+           gap: 20px;
+        }
+        #btn{
+            width: 80%;
+            font-size: large;
+            color: white;
+            background-color: red;
+            border-radius: 35px;
+            text-align: center;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div class="content-box">
+        <div id="totalDiv"></div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    var cartListArr = JSON.parse(localStorage.getItem("cartItemList"));
+    // var cartListArr =  []
+    console.log(cartListArr);
+    function featuredDataDisplay() {
+        cartListArr.map(function (elem, index) {
+            document.querySelector("#box").innerHTML="";
+            var menDiv = document.createElement("div");
+            menDiv.setAttribute("id", "grid");
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("class", "imagbox")
+            
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image_url);
+
+            div1.append(img)
+            
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "contentbox")
+
+            var name = document.createElement("h1");
+            name.innerText = elem.name;
+
+            var para1 = document.createElement("p");
+            para1.innerText="8 pieces of our freshly prepared World Famous Chicken - 2 drums, 2 thighs, 2 breasts, 2 wings. 2 large sides of your choice and 4 biscuits."
+
+            var calories = document.createElement("h3");
+            calories.innerText = elem.calories;
+
+            var location = document.createElement("h4");
+            location.innerText = elem.location;
+
+            var price = document.createElement("p")
+            price.innerText="Price "+" "+elem.price+"/";
+
+            var quantiy = document.createElement("p")
+            quantiy.innerText="Quantiy"+" "+elem.quant;
+            quantiy.style.fontSize="18px";
+
+            var btn1 = document.createElement("button");
+        btn1.innerText="Add";
+        btn1.addEventListener("click",function(){
+            inCreaseQuantiy(index);
+            
+        });
+
+
+        var btn2 = document.createElement("button");
+        btn2.innerText="minuse";
+        btn2.addEventListener("click",function(){
+            decreaseQuantiy(index);
+        })
+
+            var btn = document.createElement("button")
+            btn.innerText="Pick Store For Price"
+            btn.setAttribute("id","btn")
+            
+            var anchorTag = document.createElement("a")
+            anchorTag.setAttribute("href","payment.html")
+            anchorTag.append(btn);
+            btn.addEventListener("click", function(){
+                addToPaytmPage(elem);
+            })
+            div2.append(name,para1, calories, location,quantiy,btn1,btn2,price,anchorTag)
+
+            menDiv.append(div1,div2)
+
+            document.querySelector("#box").append(menDiv);
+
+        });
+    }
+    featuredDataDisplay();
+
+    function showTotal(){
+        var total =  cartListArr.reduce(function(acc,elem){
+        return acc+(elem.price*elem.quant);
+    },0);
+    
+    document.getElementById("totalDiv").innerText=total;
+    }
+
+    featuredDataDisplay(cartListArr);
+    showTotal();
+    function inCreaseQuantiy(index){
+        console.log(index);
+        cartListArr[index].quant++;
+        console.log(cartListArr); 
+        localStorage.setItem("increaseCartList",JSON.stringify(cartListArr));
+        featuredDataDisplay(cartListArr);   
+        showTotal();
+        }
+
+        function decreaseQuantiy(index){
+        console.log(index);
+        cartListArr[index].quant--;
+        console.log(cartListArr); 
+        localStorage.setItem("increaseCartList",JSON.stringify(cartListArr));
+        featuredDataDisplay(cartListArr);   
+        showTotal();
+        }
+
+        var paytemArr = [];
+        function addToPaytmPage(elem){
+            paytemArr.push(elem);
+            localStorage.setItem("paytemArrList",JSON.stringify(paytemArr));
+        }
+</script>

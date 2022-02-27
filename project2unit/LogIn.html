@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://www.kfc.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    #loginContainer{
+        display: block;
+        height: auto;
+        width: 1019.06;
+        display: flex;
+    }
+
+    #container>div {
+
+        height: auto;
+        width: 50%;
+    }
+
+    #container>div>#welcome {
+        font-weight: bold;
+        color: white;
+        padding-top: 30px;
+        margin: 24px 0px 20px;
+        font-family: sans-serif;
+    }
+
+    #unlock {
+        font-size: 7.1rem;
+        color: white;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        max-width: 54rem;
+        font-family: sans-serif;
+        word-spacing: -50px;
+    }
+
+    #left {
+        text-align: center;
+        background-color: #e4002b;
+        bottom: -11rem;
+    }
+
+    .img {
+        height: 400px;
+        position: center;
+        max-width: 96rem;
+        /* transform: rotate(30deg); */
+        margin-top: -80px;
+        margin-left: -150px;
+    }
+    form+p+p>a{
+        color: blue;
+    }
+    #right {
+        text-align: center;
+    }
+
+    #title {
+        font-weight: bold;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .input {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        width: 100%;
+        border-radius: 0%;
+        text-align: center;
+        column-gap: 2rem;
+        outline: none;
+    }
+
+    .no-outline:focus {
+        outline: none;
+    }
+
+    .loginform {
+        width: 600px;
+        margin-left: 60px;
+        margin-right: 0px;
+
+    }
+
+    .box {
+        background-color: white;
+        box-sizing: inherit;
+        width: 500px;
+        margin-top: 200px;
+    }
+
+    h1 {
+        text-align: center;
+        padding-top: 35px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    form label {
+        display: flex;
+        text-align: center;
+        font-size: 0px;
+    }
+
+    form input {
+        width: 95%;
+        row-gap: 30px;
+        font-size: 1.1em;
+        line-height: 3rem;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    button {
+        height: 3rem;
+        width: 100%;
+        padding: 0 4rem;
+        border-radius: calc(4.4rem/2);
+        color: white;
+        background-color: black;
+        font-weight: bold;
+        font-family: sans-serif;
+
+    }
+
+    p {
+        text-align: center;
+        font-family: sans-serif;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <div id="main-header">
+            <div class="top-header-img">
+                <!-- three dot line -->
+                <div class="one-line"></div>
+                <div class="two-line"></div>
+                <div class="three-line"></div>
+            </div>
+            <div class="bottom-header-img">
+                <div class="logo-header">
+                    <h3><a href="Home.html">Kentucky Fried Chicken</a></h3>
+                </div>
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="mainfeatured.html">Menu</a></li>
+                        <li><a href="carerrs.html">Careers</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="blank.html">Find a KFC</a></li>
+                    </ul>
+                </div>
+                <div class="order-btton">
+                    <button class="headerbtn"><a href="mainfeatured.html">Start Order</a></button>
+                </div>
+                <div class="button">
+                    <a href="signup.html"><div class="login-btton">
+                        <img src="img/man-icon.jpg" width="60" height="60"/>
+                    </div>
+                    </a>
+                  <a href="bag.html">  <div class="bag-btton">
+                        <img src="img/images.png" width="30" height="30"/>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="black-text">
+            <img src="img/map-icon.jpg" width="30" height="30" alt="">
+            <p>Start an Order for Pickup or Deilvery</p>
+        </div>
+    </div>
+    <div id="loginContainer">
+        <div id="left">
+            <div id="welcome">
+                WELCOME TO KFC.COM
+            </div>
+            <div id="unlock">
+                UNLOCK FASTER CHECKOUT
+            </div>
+            <img  class="img"src="https://www.kfc.com/_next/static/images/drumstick-f34d7ede0a1a1e6955d5fe23aeba4f34.png">
+        </div>
+
+        <div class="loginform">
+            <div class="box">
+                <h1>SIGN IN TO YOUR KFC ACCOUNT</h1>
+                <form>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email">
+
+                    <label>Password</label>
+                    <input type="password" placeholder="Password">
+
+                    <button class="log-in">Log In</button>
+                </form>
+                <p>By signing into the application or proceeding as a guest,<br>
+                    you agree to our <a href="#">Privacy Policy.</a>and <a href="#"> Terms of Use.</a>
+                </p>
+                <p>Don't have an account? <a href=http://192.168.0.105:5500/KFC%20project/signup.html>Join now</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

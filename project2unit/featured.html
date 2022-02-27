@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       #innerBox{
+        display: flex;
+        gap: 30px;
+        margin: auto;
+        width: 90%;
+       
+        height: 250px;
+        
+
+    }
+    img{
+        height: 250px;
+        width: 100%;
+
+    }
+    #smallBox{
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        background-color: rgb(255, 250, 250);
+        text-align: left;
+        height: auto;
+        width: 300px;
+    }
+    .para{
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 10;
+        padding-left: 10px;
+        line-height: 80%;
+    }
+    #text{
+       margin: auto;
+       width: 90%;
+       padding-bottom: 50px;
+       font-family:Impact-fantasy;
+    }
+
+</style>
+<body>
+    <div id="text">
+        <h1>
+            FEATURED ITEMS
+        </h1>
+    </div>
+    <div id="box">
+        <div id="innerBox">
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    var feaObjArr = [{
+    itemImage: "https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
+    itemName :"Sandwich And Tenders Meal",
+    itemCal:"Calories:4700-7430"},
+
+    {
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndcombo?q=75",
+        itemName :"KFC Chicken Sandwich Combo",
+        itemCal:" Calories:690-1160"
+    },
+
+    {
+        itemImage: src="https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
+        itemName :"8 pc Meal",
+        itemCal:"Calories:2300-4980"
+    }]
+
+
+
+feaObjArr.map(function(elem,inde,arr){
+    var div1 =document.createElement("div");
+    div1.setAttribute("id","smallBox");
+    var  img = document.createElement("img");
+    img.setAttribute("src",elem.itemImage);
+    // img.setAttribute("id","focus");
+    var para1= document.createElement("p");
+    para1.setAttribute("class","para");
+    para1.innerText=elem.itemName;
+    var para2 = document.createElement("p");
+    para2.innerText=elem.itemCal;
+    para2.setAttribute("class","para");
+    var para3 = document.createElement("p");
+    para3.innerText="Set Location For Price";
+    para3.setAttribute("class","para");
+    div1.append(img,para1,para2,para3);
+    document.querySelector("#innerBox").append(div1)
+})
+
+</script>
