@@ -15,12 +15,12 @@ This is a collaborative Project from Masai School in the Construct Week by FW-16
 Firstly let’s know about KFC. KFC Corporation is the largest fast-food chicken operator, developer, and franchiser in the world. KFC, a wholly owned subsidiary of PepsiCo, Inc. until late 1997, operates over 5,000 units in the United States, approximately 60 percent of which are franchises. Internationally, KFC has more than 3,700 units, of which two-thirds are also franchised.
 
 # Challenges :
-During the project, we divided our work among ourselves and we played our part very well.
+During the project, we divided our work among ourselves and we played our part very well. And we got too many challenges to develope the all pages. we faced many challenges about HTML, CSS and DOM Manipulation for set & access the information from Local storage. but I practiced, revised and learnt foom my team members.
 
 # Tech Stack & Tools :
 These are the technologies used in this project which are available below with their packages and websites:
 
-* [KFC](https://KFC.com/ "home") Images (From Original Website) 
+* [KFC] Images (From Our Website) 
 * 
 ![Screenshot (156)](https://user-images.githubusercontent.com/99641288/171843057-6bf12c27-db8a-46eb-9bf4-3282c1d2687e.png)
 
