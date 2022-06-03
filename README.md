@@ -3,7 +3,7 @@ masai-first-project
 # Project :
 <a href="https://polite-lamington-faa8d2.netlify.app/">KFC Clone Link</a>
 # Collaborator :
-This is a collaborative Project from Masai School in the Construct Week by FW-16 batch students. We were Six members of the team:
+This is a collaborative Project from Masai School in the Construct Week by FW-16 batch students. There were a total of Six members in the team:
 1. Pankaj
 2. Saradindu Prakash 
 3. Pratik
